@@ -6,14 +6,22 @@
     <title>Not Sure</title>
     <style>
         body {
-            background-color: #04D9FF; /* Light background color */
-            font-family: Comic Sans MS', cursive; /* Fallback font */   
+            background-color: #04D9FF; 
+            font-family: Comic Sans MS', cursive; 
         }
         .message {
             font-size: 48px;
-            font-family: 'Comic Sans MS', cursive, sans-serif; /* Comic Sans font */
-            color: #16F529; /* Dark color for text */
+            font-family: 'Comic Sans MS', cursive, sans-serif; 
+            color: #16F529;    
         }
+        .soundboard {
+            margin-top:20px;
+        }
+        button {
+            padding:10x 20px;
+            margin:5px;
+            font-size: 16px;
+        {
     </style>
 </head>
 <body>
@@ -65,6 +73,18 @@ Back on Mount Everest, Zinker prepared to start making his machine. He attached 
 “Metals and wires, screws and nails,” boomed Zinker ``welcome to my unicorn and whale combo. So it began. Zuper started running, wires started to flow with energy, and BOOM! It was ready. Zinker cautiously approached the big box. He opened the door and Voila! Standing on its tail is a greyish blue whale with dark grey spots on its back and tiny fins and eyes. The best part was probably a unicorn horn on its head.  “Finally! My first successful creation this year!” he exclaimed,”now, what should I call it? Not Whale, Norwhal,Nawhale, NARWHAL! THat’s what I'll name it! Now, to make more!
 He made multiple trips to Lunk sea and Uniland until there were no unicorns left! The set all the narwhals free, each with a tag on its horn saying “32nd creation. From Zinker” His signature tag.</p>
 
+    <div class="soundboard">
+        <button onclick="playSound('sound1')">Sound 1</button>
+        <button onclick="playSound('sound2')">Sound 2</button>
+        <button onclick="playSound('sound3')">Sound 3</button>
+    </div>
+
+    <script>
+        function playSound(soundId) {
+            const audio = new Audio(`sounds/${soundId}.mp3`);
+            audio.play();
+        }
+    </script>
     
 </body>
 </html>
